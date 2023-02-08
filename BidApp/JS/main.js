@@ -1,4 +1,4 @@
-let bids = [10, 30, 35, 40, 50];
+let bids = [];
 
 // Create a function that will add the array of bids to the element (1)
 function showBidsOnPage() {
@@ -22,11 +22,10 @@ function placeBid(buttonID) {
 
 // Create a function that will retrieve the array of bids from localStorage
 
-
-function highBid() {
+function highBid() { 
     let largest = 0;
     for (let i = 0; i<bids.length; i++) {
-        if (bids[i]>largest) {
+        if (bids[i]>=largest) {
             largest = bids[i];
         }
     }
