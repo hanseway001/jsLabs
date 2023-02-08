@@ -1,0 +1,66 @@
+body {
+  background-color: #2c2929;
+}
+
+h1 {
+  font-size: 4em;
+  margin: 0.5em;
+}
+
+.content {
+  background-color: #858585;
+  margin: 30px auto;
+  width: 90vw;
+  display: flex;
+  justify-content: center;
+  border-radius: 20px;
+}
+
+.sides {
+  width: 25%;
+  display: flex;
+  align-items: center;
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 50%;
+}
+
+.biddingArea {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  color: white;
+  background-color: #2c2929;
+  border-radius: 20px;
+  width: 90%;
+  height: 150px;
+  margin: 3em auto;
+}
+
+.bidsArea {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  color: white;
+  background-color: #2c2929;
+  border-radius: 20px;
+  width: 90%;
+  padding: 1em;
+  margin: 1em auto;
+}
+
+.displayContent {
+  background-color: #ffffff;
+  color: #000000;
+  border-radius: 20px;
+  width: 90%;
+  height: 100px;
+  padding: 20px;
+}/*# sourceMappingURL=style.css.map */

@@ -4,9 +4,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Bidding App</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js"></script>
 </head>
 <body>
-    
+    <div class="content">
+        <div class="left sides">
+            <div class="biddingArea">
+                <label for="bidder1">First Bidder Bid</label>
+                <input type="number" id="bidder1"> <!-- must stay immidiate sibling to button -->
+                <input type="button" value="Place Bid" id="button1" onclick="placeBid(this.id)">
+            </div>
+        </div>
+        <div class="center">
+            <h1>Bid History</h1>
+            <div class="bidsArea">
+                <div>Current High Bid</div>
+                <div id="highBidDisplayArea" class="displayContent"></div>
+                <div>Bid History</div>
+                <div id="bidDisplayArea" class="displayContent"></div>
+            </div>
+        </div>
+        <div class="right sides">
+            <div class="biddingArea">
+                <label for="bidder2">Second Bidder Bid</label>
+                <input type="number" id="bidder2"> <!-- must stay immidiate sibling to button -->
+                <input type="button" value="Place Bid" id="button2" onclick="placeBid(this.id)">
+            </div>
+        </div>
+    </div>
 </body>
 </html>
