@@ -56,6 +56,20 @@ h1 {
   margin: 1em auto;
 }
 
+.userBid {
+  border-radius: 5px;
+  outline: none;
+  padding: 0.5em;
+  border: none;
+  width: 75%;
+}
+
+.bidButton {
+  background-color: rgb(240, 167, 31);
+  border-radius: 5px;
+  border: none;
+}
+
 .displayContent {
   background-color: #ffffff;
   color: #000000;
@@ -63,4 +77,26 @@ h1 {
   width: 90%;
   height: 100px;
   padding: 20px;
+  overflow-wrap: break-word;
+}
+
+.centered {
+  font-size: 3em;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hidden {
+  display: none;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: lightblue;
+  }
+  h1 {
+    font-size: 2em;
+  }
 }/*# sourceMappingURL=style.css.map */

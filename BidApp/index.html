@@ -13,15 +13,15 @@
         <div class="left sides">
             <div class="biddingArea">
                 <label for="bidder1">First Bidder Bid</label>
-                <input type="number" id="bidder1"> <!-- must stay immidiate sibling to button -->
-                <input type="button" value="Place Bid" id="button1" onclick="placeBid(this.id)">
+                <input type="number" id="bidder1" class="userBid"> <!-- must stay immidiate sibling to button -->
+                <input type="button" value="Place Bid" id="button1" class="bidButton" onclick="placeBid(this.id)">
             </div>
         </div>
         <div class="center">
             <h1>Bidding System</h1>
             <div class="bidsArea">
                 <div>Current High Bid</div>
-                <div id="highBidDisplayArea" class="displayContent"></div>
+                <div id="highBidDisplayArea" class="displayContent centered"></div>
                 <div>Bid History</div>
                 <div id="bidDisplayArea" class="displayContent"></div>
             </div>
@@ -29,8 +29,8 @@
         <div class="right sides">
             <div class="biddingArea">
                 <label for="bidder2">Second Bidder Bid</label>
-                <input type="number" id="bidder2"> <!-- must stay immidiate sibling to button -->
-                <input type="button" value="Place Bid" id="button2" onclick="placeBid(this.id)">
+                <input type="number" id="bidder2" class="userBid"> <!-- must stay immidiate sibling to button -->
+                <input type="button" value="Place Bid" id="button2" class="bidButton hidden" onclick="placeBid(this.id)">
             </div>
         </div>
     </div>

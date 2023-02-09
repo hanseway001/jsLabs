@@ -17,6 +17,11 @@ function placeBid(buttonID) {
     const inputValue = getInfoFromInput(sidInput);
     showHighBidOnPage();
     showBidsOnPage();
+    
+    let elementsArray = document.querySelectorAll('.bidButton');
+    elementsArray.forEach(element => element.classList.toggle('hidden'));
+  
+
 }
 // Create a function that will save the array of bids to localStorage
 
@@ -24,8 +29,8 @@ function placeBid(buttonID) {
 
 function highBid() { 
     let largest = 0;
-    for (let i = 0; i<bids.length; i++) {
-        if (bids[i]>=largest) {
+    for (let i = 0; i<=bids.length; i++) {
+        if (bids[i]>largest) {
             largest = bids[i];
         }
     }
