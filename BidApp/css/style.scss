@@ -1,5 +1,7 @@
+@use 'variables.scss' as *;
+
 body {
-    background-color: #2c2929;
+    background-color: $bGColor;
 }
 
 h1 {
@@ -8,7 +10,7 @@ h1 {
 }
 
 .content {
-    background-color: #858585;
+    background-color: $bGLightColor;
     margin: 30px auto;
     width: 90vw;
     display: flex;
@@ -35,7 +37,7 @@ h1 {
     align-items: center;
 
     color: white;
-    background-color: #2c2929;
+    background-color: $bGColor;
     border-radius: 20px;
     width: 90%;
     height: 150px;
@@ -49,7 +51,7 @@ h1 {
     align-items: center;
 
     color: white;
-    background-color: #2c2929;
+    background-color: $bGColor;
     border-radius: 20px;
     width: 90%;
     padding: 1em;
@@ -66,9 +68,10 @@ h1 {
 }
 
 .bidButton {
-    background-color: rgb(240, 167, 31);
+    background-color: $buttonColor;
     border-radius: 5px;
     border: none;
+    box-shadow: 2px 10px 25px -7px rgba(240,167,31,0.75);
 }
 
 .displayContent {
@@ -96,10 +99,29 @@ h1 {
 
 @media only screen and (max-width: 600px) {
     body {
-      background-color: lightblue;
+    //   background-color: lightblue;
     }
     h1 {
         font-size: 2em;
     }
-    
+    .content {
+        flex-direction: column;
+    }
+    .center {
+        order: 1;
+        margin: 10%
+    }
+    .left {
+        order: 2;
+    }
+    .right {
+        order: 3;
+    }
+    .sides, .center{
+        margin: 0 auto;
+    }
+    .biddingArea {
+        margin: 5% 0;
+    }
+
 }

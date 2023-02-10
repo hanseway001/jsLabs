@@ -15,6 +15,7 @@ function getInfoFromInput(sibling) {
 function placeBid(buttonID) {
     let sidInput = document.getElementById(buttonID).previousElementSibling.id;
     const inputValue = getInfoFromInput(sidInput);
+    sidInput.textContent = '0';
     showHighBidOnPage();
     showBidsOnPage();
     
@@ -30,7 +31,7 @@ function placeBid(buttonID) {
 function highBid() { 
     let largest = 0;
     for (let i = 0; i<=bids.length; i++) {
-        if (bids[i]>largest) {
+        if (parseInt(bids[i])>parseInt(largest)) {
             largest = bids[i];
         }
     }

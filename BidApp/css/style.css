@@ -65,9 +65,10 @@ h1 {
 }
 
 .bidButton {
-  background-color: rgb(240, 167, 31);
+  background-color: #f0a71f;
   border-radius: 5px;
   border: none;
+  box-shadow: 2px 10px 25px -7px rgba(240, 167, 31, 0.75);
 }
 
 .displayContent {
@@ -93,10 +94,26 @@ h1 {
 }
 
 @media only screen and (max-width: 600px) {
-  body {
-    background-color: lightblue;
-  }
   h1 {
     font-size: 2em;
+  }
+  .content {
+    flex-direction: column;
+  }
+  .center {
+    order: 1;
+    margin: 10%;
+  }
+  .left {
+    order: 2;
+  }
+  .right {
+    order: 3;
+  }
+  .sides, .center {
+    margin: 0 auto;
+  }
+  .biddingArea {
+    margin: 5% 0;
   }
 }/*# sourceMappingURL=style.css.map */
