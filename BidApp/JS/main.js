@@ -11,7 +11,7 @@ function showBidsOnPage() {
 function getInfoFromInput(sibling) {
     bids.push(document.getElementById(sibling).value);
     //save to jsaon
-    // saveData()
+    saveData()
 }
 // Add the function above to the click event of the “Place Bid” buttons 
 function placeBid(buttonID) {
@@ -29,25 +29,7 @@ function placeBid(buttonID) {
 }
 // Create a function that will save the array of bids to localStorage
 function saveData() {
-
-    $.ajax({
-        url: url,
-        type: 'POST',
-        contentType:'application/json',
-        data: JSON.stringify(bids),
-        dataType:'json'
-      });
-
-    // const jsonData = JSON.stringify(bids);
-    
-    // function download(jsonData) {
-        // var a = document.createElement("a");
-        // var file = new Blob([jsonData], {type: Text});
-        // a.href = URL.createObjectURL(file);
-        // a.download = bids.json;
-        // a.click();
-    // }
-    // download(jsonData, 'json.txt', 'text/plain');
+    localStorage.savedBids = JSON.stringify(bids);
 }
 
 // Create a function that will retrieve the array of bids from localStorage
@@ -56,6 +38,7 @@ function loadDoc() {
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             let product = JSON.parse(this.responseText)
+            bids.push(product)
             // document.getElementById('productName').innerHTML = product.productName;
             // document.getElementById('productImage').src = product.productImage;
             // document.getElementById('productPrice').innerHTML = product.productPrice;
